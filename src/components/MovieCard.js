@@ -1,4 +1,4 @@
-import React , {useContext , useState} from "react";
+import React , {useContext } from "react";
 import { Link } from "react-router-dom";
 import DataContext from "../context/data";
 import './MovieCard.css'
@@ -13,6 +13,15 @@ export default function MovieCard({ data }) {
       copy.push(movie);
       setFavorites(copy);
   }
+
+  const checkMovieInFavorites = (id)=>{
+    let movie = favorites.find((movie)=> movie.id === id)
+    if(!movie)
+      return false 
+    else 
+      return true  
+  }
+
   return (    
     <>
       <div className="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
@@ -33,7 +42,7 @@ export default function MovieCard({ data }) {
               <h5 className="card-title align-self-center fw-bolder p-3 fs-6">{movie.title}</h5>
               <div className="card-footer d-flex justify-content-between">
                 <Link className="btn btn-primary my-2 mx-1 p-2" to={`/movie/${movie.id}`}>Movie Details</Link>
-                <button className="btn btn-success my-2 mx-1 p-2" onClick={()=>addToFavorites(movie)}>Add To Favorites</button>
+                <button className={`btn btn-success my-2 mx-1 p-2 ${checkMovieInFavorites(movie.id) ? "btn-secondary disabled" : ""}`} onClick={()=>addToFavorites(movie)}>Add To Favorites</button>
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect , useState , useContext} from "react";
+import { useEffect , useState } from "react";
 import axiosInstance from '../network/axiosConfig'
 import MovieCard from '../components/MovieCard'
 
@@ -38,7 +38,7 @@ export default function HomePage(){
 
     return(
         <>
-            <div className="container bg-transparent my-4 p-3">
+            <div className="container bg-transparent my-4 p-3 ">
                 <MovieCard data={movies}/>
                 <div className="container mt-5 d-flex justify-content-evenly">
                     <button className="btn btn-danger px-3 fs-4 text-white" onClick={()=>previousPage()}>previous</button>
