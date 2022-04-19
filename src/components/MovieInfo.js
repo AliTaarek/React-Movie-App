@@ -13,7 +13,7 @@ export default function MovieInfo({ data }) {
                 <span className="movie_time">{data.release_date}</span>
                 <span className="movie_time">{data.vote_average}/10 <i className="fa-solid fa-star" style={{color:"orange"}}></i></span>
             </div>
-            <div className="movieDesc">
+            <div className="movieDesc fs-5">
                 {data.overview}
             </div>
         </div>

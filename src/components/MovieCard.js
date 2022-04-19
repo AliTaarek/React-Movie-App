@@ -1,6 +1,7 @@
 import React , {useContext , useState} from "react";
 import { Link } from "react-router-dom";
 import DataContext from "../context/data";
+import './MovieCard.css'
 
 export default function MovieCard({ data }) {
   const imgPath = "https://image.tmdb.org/t/p/w500";
@@ -17,7 +18,7 @@ export default function MovieCard({ data }) {
     <>
       <div className="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
         {data.map((movie) => 
-          <div key={movie.id} className="col hp">
+          <div key={movie.id} className="col hp" id="movieCard">
             <div className="card h-100 shadow">
               <img
                 src={imgPath + movie.poster_path}
