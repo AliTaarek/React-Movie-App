@@ -18,19 +18,6 @@ export default function MovieInfo({ data }) {
             </div>
         </div>
     </div>
-    {/* <div className=" container row mt-5">
-      <div className="card text-white col-10 offset-2" style={{height:"500px"}}>
-        <img src={imgPath + data.poster_path} className="card-img h-100" style={{width:"400px"}} alt={data.title} />
-        <div className="card-img-overlay">
-          <h5 className="card-title">{data.title}</h5>
-          <p className="card-text">
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </p>
-          <p className="card-text">Last updated 3 mins ago</p>
-        </div>
-      </div>
-    </div> */}
     </>
   );
 }
